@@ -148,4 +148,16 @@ Locales['en'] = {
   -- Notifications
   ['alert_police'] = 'police alert',
   ['phone_police'] = 'police',
+  -- start esx_advancedjail
+  ['jail'] = 'jail',
+  ['jail_menu_info'] = 'Jail Player in Minutes',
+  ['invalid_amount'] = 'Invalid Time Amount. Example: 5 = 5 Minutes',
+  ['jail_menu'] = 'Choose Jail Location',
+  ['mission_row'] = 'Mission Row',
+  ['bolingbroke_pen'] = 'Bolingbroke Penitentiary',
+  ['mission_row_1'] = 'Mission Row Cell 1',
+  ['mission_row_2'] = 'Mission Row Cell 2',
+  ['mission_row_3'] = 'Mission Row Cell 3',
+  ['bolingbroke_pen_1'] = 'Bolingbroke Penitentiary Yard',
+  -- end esx_advancedjail
 }
