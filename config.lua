@@ -84,45 +84,45 @@ Config.PoliceStations = {
 Config.AuthorizedWeapons = {
 	recruit = {
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
-		{weapon = 'WEAPON_STUNGUN', price = 1500},
-		{weapon = 'WEAPON_FLASHLIGHT', price = 80}
+		{weapon = 'WEAPON_STUNGUN', price = 0},
+		{weapon = 'WEAPON_FLASHLIGHT', price = 0}
 	},
 
 	officer = {
-		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 1000, 4000, nil}, price = 10000},
+		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 1000, 4000, nil}, price = 0},
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
-		{weapon = 'WEAPON_SMOKEGRENADE', price = 50},
-		{weapon = 'WEAPON_STUNGUN', price = 500},
+		{weapon = 'WEAPON_SMOKEGRENADE', price = 0},
+		{weapon = 'WEAPON_STUNGUN', price = 0},
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0}
 	},
 
 	sergeant = {
-		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 1000, 4000, nil}, price = 10000},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 50000},
-		{weapon = 'WEAPON_PUMPSHOTGUN', components = {2000, 6000, nil}, price = 70000},
+		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 1000, 4000, nil}, price = 0},
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0},
+		{weapon = 'WEAPON_PUMPSHOTGUN', components = {2000, 6000, nil}, price = 0},
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
-		{weapon = 'WEAPON_SMOKEGRENADE', price = 50},
-		{weapon = 'WEAPON_STUNGUN', price = 500},
+		{weapon = 'WEAPON_SMOKEGRENADE', price = 0},
+		{weapon = 'WEAPON_STUNGUN', price = 0},
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0}
 	},
 
 	lieutenant = {
-		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 1000, 4000, nil}, price = 10000},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 50000},
-		{weapon = 'WEAPON_PUMPSHOTGUN', components = {2000, 6000, nil}, price = 70000},
+		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 1000, 4000, nil}, price = 0},
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0},
+		{weapon = 'WEAPON_PUMPSHOTGUN', components = {2000, 6000, nil}, price = 0},
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
-		{weapon = 'WEAPON_SMOKEGRENADE', price = 50},
-		{weapon = 'WEAPON_STUNGUN', price = 500},
+		{weapon = 'WEAPON_SMOKEGRENADE', price = 0},
+		{weapon = 'WEAPON_STUNGUN', price = 0},
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0}
 	},
 
 	boss = {
-		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 1000, 4000, nil}, price = 10000},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 50000},
-		{weapon = 'WEAPON_PUMPSHOTGUN', components = {2000, 6000, nil}, price = 70000},
+		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 1000, 4000, nil}, price = 0},
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0},
+		{weapon = 'WEAPON_PUMPSHOTGUN', components = {2000, 6000, nil}, price = 0},
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
-		{weapon = 'WEAPON_SMOKEGRENADE', price = 50},
-		{weapon = 'WEAPON_STUNGUN', price = 500},
+		{weapon = 'WEAPON_SMOKEGRENADE', price = 0},
+		{weapon = 'WEAPON_STUNGUN', price = 0},
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0}
 	}
 }
