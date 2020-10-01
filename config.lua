@@ -69,7 +69,7 @@ Config.PoliceStations = {
 				InsideShop = vector3(477.0, -1106.4, 43.0), -- HETZELFDE HOUDEN
 				SpawnPoints = {
 					{coords = vector3(449.5, -981.2, 43.6), heading = 92.6, radius = 10.0},
-					{coords = vector3(481.3t, -982.5, 41.6), heading = 351.15, radius = 10.0}
+					{coords = vector3(481.3, -982.5, 41.6), heading = 351.15, radius = 10.0}
 				}
 			}
 		},
@@ -439,7 +439,7 @@ Config.PoliceStations = {
 		},
 	
 		Cloakrooms = {
-			{ x =  -425.02, y = 5990.1, z = -118.76 },
+			vector3(-425.02, 5990.1, -118.76),
 		},
 	
 		Armories = {
