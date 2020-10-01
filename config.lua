@@ -14,7 +14,7 @@ Config.EnableHandcuffTimer        = true -- Enable handcuff timer? will unrestra
 Config.HandcuffTimer              = 15 * 60000 -- 15 minutes.
 
 Config.EnableJobBlip              = true -- Enable blips for cops on duty, requires esx_society.
-Config.EnableCustomPeds           = true -- Enable custom peds in cloak room? See Config.CustomPeds below to customize peds.
+Config.EnableCustomPeds           = false -- Enable custom peds in cloak room? See Config.CustomPeds below to customize peds.
 
 Config.EnableESXService           = true -- Enable esx service?
 Config.MaxInService               = 10 -- How much people can be in service at once?
@@ -348,7 +348,7 @@ Config.PoliceStations = {
 
 		Helicopters = {
 			{
-				Spawner = vector3(839.4, -1395, 26.4), -- Zwevende heli icon
+				Spawner = vector3(848.2, -1409.79, 26.2), -- Zwevende heli icon
 				InsideShop = vector3(477.0, -1106.4, 43.0), -- HETZELFDE HOUDEN
 				SpawnPoints = {
 					{coords = vector3(835, -1406.9, 26.2), heading = 271.1, radius = 10.0}
@@ -497,15 +497,16 @@ Config.AuthorizedWeapons = {
 	},
 
 	officer = {
-		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 0, 0, nil}, price = 0},
+		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 0, nil}, price = 0},
+		{weapon = 'WEAPON_PUMPSHOTGUN', components = {0, 0, nil}, price = 0},
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
 		{weapon = 'WEAPON_SMOKEGRENADE', price = 0},
 		{weapon = 'WEAPON_STUNGUN', price = 0},
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0}
 	},
-
+	
 	sergeant = {
-		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 0, 0, nil}, price = 0},
+		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 0, nil}, price = 0},
 		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 0, 0, 0, 0, nil}, price = 0},
 		{weapon = 'WEAPON_PUMPSHOTGUN', components = {0, 0, nil}, price = 0},
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
@@ -515,7 +516,7 @@ Config.AuthorizedWeapons = {
 	},
 
 	lieutenant = {
-		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 0, 0, nil}, price = 0},
+		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 0, nil}, price = 0},
 		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 0, 0, 0, 0, nil}, price = 0},
 		{weapon = 'WEAPON_PUMPSHOTGUN', components = {0, 0, nil}, price = 0},
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
@@ -525,7 +526,7 @@ Config.AuthorizedWeapons = {
 	},
 
 	boss = {
-		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 0, 0, nil}, price = 0},
+		{weapon = 'WEAPON_COMBATPISTOL', components = {0, 0, 0, nil}, price = 0},
 		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 0, 0, 0, 0, nil}, price = 0},
 		{weapon = 'WEAPON_PUMPSHOTGUN', components = {0, 0, nil}, price = 0},
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
@@ -540,24 +541,32 @@ Config.AuthorizedVehicles = {
 		recruit = {},
 
 		officer = {
+			{model = 'police', price = 150},
 			{model = 'police3', price = 200},
-			{model = 'policeb', price = 305}
+			{model = 'policeb', price = 305},
+			{model = 'sheriff', price = 305}
 		},
 
 		sergeant = {
+			{model = 'police', price = 150},
 			{model = 'police2', price = 185},
 			{model = 'police3', price = 200},
 			{model = 'policeb', price = 305},
-			{model = 'policet', price = 185}
+			{model = 'policet', price = 185},
+			{model = 'sheriff', price = 305},
+			{model = 'sheriff2', price = 305}
 		},
 
 		lieutenant = {
+			{model = 'police', price = 150},
 			{model = 'police2', price = 185},
 			{model = 'police3', price = 200},
 			{model = 'police4', price = 250},
 			{model = 'policeb', price = 305},
 			{model = 'policet', price = 185},
-			{model = 'riot', price = 700},
+			{model = 'sheriff', price = 305},
+			{model = 'sheriff2', price = 305},
+			{model = 'riot', price = 700}
 		},
 
 		boss = {
@@ -567,7 +576,9 @@ Config.AuthorizedVehicles = {
 			{model = 'police4', price = 250},
 			{model = 'policet', price = 185},
 			{model = 'policeb', price = 305},
-			{model = 'riot', price = 700},
+			{model = 'sheriff', price = 305},
+			{model = 'sheriff2', price = 305},
+			{model = 'riot', price = 700}
 		}
 	},
 
@@ -595,17 +606,11 @@ Config.CustomPeds = {
 
 	officer = {},
 
-	sergeant = {
-		{label = 'Speciale Interventies', maleModel = 's_m_y_swat_01', femaleModel = 's_m_y_swat_01'}
-	},
+	sergeant = {},
 
-	lieutenant = {
-		{label = 'Speciale Interventies', maleModel = 's_m_y_swat_01', femaleModel = 's_m_y_swat_01'}
-	},
+	lieutenant = {},
 
-	boss = {
-		{label = 'Speciale Interventies', maleModel = 's_m_y_swat_01', femaleModel = 's_m_y_swat_01'}
-	}
+	boss = {}
 }
 
 -- CHECK SKINCHANGER CLIENT MAIN.LUA for matching elements
