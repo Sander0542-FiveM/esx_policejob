@@ -292,7 +292,7 @@ Config.PoliceStations = {
 				Spawner = vector3(379, -1598.5, 37), -- Zwevende heli icon
 				InsideShop = vector3(477.0, -1106.4, 43.0), -- HETZELFDE HOUDEN
 				SpawnPoints = {
-					{coords = vector3(363, -1598.3, 37), heading = 142	~, radius = 10.0}
+					{coords = vector3(363, -1598.3, 37), heading = 142, radius = 10.0}
 				}
 			}
 		},
