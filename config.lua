@@ -600,7 +600,9 @@ Config.AuthorizedVehicles = {
 }
 
 Config.CustomPeds = {
-	shared = {},
+	shared = {
+		{label = 'Police Ped', maleModel = 's_m_y_cop_01', femaleModel = 's_f_y_cop_01'}
+	},
 
 	recruit = {},	
 
