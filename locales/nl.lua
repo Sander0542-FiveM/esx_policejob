@@ -1,4 +1,6 @@
 Locales['nl'] = {
+  -- Black money item
+  ['black_money'] = 'zwart geld',
   -- Cloakroom
   ['cloakroom'] = 'kleedkamer',
   ['citizen_wear'] = 'burger outfit',
@@ -9,6 +11,7 @@ Locales['nl'] = {
   ['open_cloackroom'] = 'druk op ~INPUT_CONTEXT~ om je ~y~outfit~s~ te veranderen.',
   -- Armory
   ['remove_object'] = 'object opnemen',
+  ['destroy_black_money'] = 'zwart geld vernietigen',
   ['deposit_object'] = 'object storten',
   ['get_weapon'] = 'wapen uit wapenopslag nemen',
   ['put_weapon'] = 'wapen in wapenopslag opslaan',
@@ -78,6 +81,7 @@ Locales['nl'] = {
   ['license_revoke'] = 'vergunning intrekken',
   ['license_revoked'] = 'je ~b~%s~s~ is ~y~ingenomen~s~!',
   ['licence_you_revoked'] = 'je hebt het ~b~%s~s~ ingenomen van ~y~%s~s~',
+  ['black_money_removed'] = 'je hebt ~b~$%s~s~ aan zwart geld vernietigd!',
   ['no_players_nearby'] = 'er zijn geen spelers in de buurt!',
   ['being_searched'] = 'je wordt ~y~gefouilleerd~s~ door de ~b~Politie~s~',
   -- Vehicle interaction
