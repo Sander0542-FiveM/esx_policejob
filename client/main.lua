@@ -211,10 +211,22 @@ function OpenArmoryMenu(station)
 	}
 
 	if Config.EnableArmoryManagement then
-		table.insert(elements, {label = _U('get_weapon'),     value = 'get_weapon'})
 		table.insert(elements, {label = _U('put_weapon'),     value = 'put_weapon'})
-		table.insert(elements, {label = _U('remove_object'),  value = 'get_stock'})
+		
+		-- Check if player has high enough grade
+		if ESX.PlayerData.job.grade >= Config.GradeForSafeAccess then
+			table.insert(elements, {label = _U('get_weapon'),     value = 'get_weapon'})
+		end
+
 		table.insert(elements, {label = _U('deposit_object'), value = 'put_stock'})
+
+		-- Check if player has high enough grade
+		if ESX.PlayerData.job.grade >= Config.GradeForSafeAccess then
+			table.insert(elements, {label = _U('remove_object'),  value = 'get_stock'})
+		end
+
+		
+		table.insert(elements, {label = _U('destroy_black_money'), value = 'remove_dirt_money'})
 	end
 
 	ESX.UI.Menu.CloseAll()
@@ -235,6 +247,8 @@ function OpenArmoryMenu(station)
 			OpenPutStocksMenu()
 		elseif data.current.value == 'get_stock' then
 			OpenGetStocksMenu()
+		elseif data.current.value == 'remove_dirt_money' then
+			OpenRemoveDirtyMoneyMenu()
 		end
 
 	end, function(data, menu)
@@ -243,6 +257,13 @@ function OpenArmoryMenu(station)
 		CurrentAction     = 'menu_armory'
 		CurrentActionMsg  = _U('open_armory')
 		CurrentActionData = {station = station}
+	end)
+end
+
+function OpenRemoveDirtyMoneyMenu() 
+	ESX.TriggerServerCallback('esx_policejob:removeBlackMoney' , function(blackMoney)
+		local _blackMoney = blackMoney
+		ESX.ShowNotification(_U('black_money_removed', _blackMoney))
 	end)
 end
 
@@ -362,26 +383,10 @@ function OpenPoliceActionsMenu()
 						TaskStartScenarioInPlace(playerPed, 'CODE_HUMAN_MEDIC_TEND_TO_DEAD', 0, true)
 
 						currentTask.busy = true
-						currentTask.task = ESX.SetTimeout(10000, function()
+						currentTask.task = ESX.SetTimeout(5000, function()
 							ClearPedTasks(playerPed)
 							ImpoundVehicle(vehicle)
 							Citizen.Wait(100) -- sleep the entire script to let stuff sink back to reality
-						end)
-
-						-- keep track of that vehicle!
-						Citizen.CreateThread(function()
-							while currentTask.busy do
-								Citizen.Wait(1000)
-
-								vehicle = GetClosestVehicle(coords.x, coords.y, coords.z, 3.0, 0, 71)
-								if not DoesEntityExist(vehicle) and currentTask.busy then
-									ESX.ShowNotification(_U('impound_canceled_moved'))
-									ESX.ClearTimeout(currentTask.task)
-									ClearPedTasks(playerPed)
-									currentTask.busy = false
-									break
-								end
-							end
 						end)
 					end
 				else
