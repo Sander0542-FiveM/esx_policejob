@@ -18,6 +18,7 @@ Config.EnableCustomPeds           = false -- Enable custom peds in cloak room? S
 
 Config.EnableESXService           = true -- Enable esx service?
 Config.MaxInService               = 10 -- How much people can be in service at once?
+Config.GradeForSafeAccess		  = 1 -- What grade does a police officer need to retrieve items from gunsafe and objectsafe? [0-4]
 
 Config.Locale                     = 'nl'
 
