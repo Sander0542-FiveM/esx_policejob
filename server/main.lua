@@ -431,6 +431,15 @@ ESX.RegisterServerCallback('esx_policejob:getStockItems', function(source, cb)
 	end)
 end)
 
+ESX.RegisterServerCallback('esx_policejob:removeBlackMoney', function(source, cb)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	local blackMoney = xPlayer.getAccount('black_money').money
+	
+	xPlayer.removeAccountMoney('black_money', blackMoney)
+
+	cb(blackMoney)
+end)
+
 ESX.RegisterServerCallback('esx_policejob:getPlayerInventory', function(source, cb)
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local items   = xPlayer.inventory
