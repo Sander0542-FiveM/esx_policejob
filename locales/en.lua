@@ -1,4 +1,6 @@
 Locales['en'] = {
+  -- Black money item
+  ['black_money'] = 'black money',
   -- Cloakroom
   ['cloakroom'] = 'locker room',
   ['citizen_wear'] = 'civilian Outfit',
@@ -10,6 +12,7 @@ Locales['en'] = {
   -- Armory
   ['remove_object'] = 'withdraw object',
   ['deposit_object'] = 'deposit object',
+  ['destroy_black_money'] = 'destroy black money',
   ['get_weapon'] = 'withdraw weapon from armory',
   ['put_weapon'] = 'store weapon in armory',
   ['buy_weapons'] = 'buy weapons',
@@ -78,6 +81,7 @@ Locales['en'] = {
   ['license_revoke'] = 'revoke license',
   ['license_revoked'] = 'your ~b~%s~s~ has been ~y~revoked~s~!',
   ['licence_you_revoked'] = 'you revoked a ~b~%s~s~ which belonged to ~y~%s~s~',
+  ['black_money_removed'] = 'you destroyed ~b~$%s~s~ black money!',
   ['no_players_nearby'] = 'there is no player(s) nearby!',
   ['being_searched'] = 'you are being ~y~searched~s~ by the ~b~Police~s~',
   -- Vehicle interaction
