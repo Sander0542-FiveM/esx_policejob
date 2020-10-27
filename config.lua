@@ -1,6 +1,6 @@
 Config                            = {}
 
-Config.DrawDistance               = 15.0 -- How close do you need to be for the markers to be drawn (in GTA units).
+Config.DrawDistance               = 25.0 -- How close do you need to be for the markers to be drawn (in GTA units).
 Config.MarkerType                 = {Cloakrooms = 20, Armories = 21, BossActions = 22, Vehicles = 36, Helicopters = 34}
 Config.MarkerSize                 = {x = 1.5, y = 1.5, z = 0.5}
 Config.MarkerColor                = {r = 50, g = 50, b = 204}
@@ -11,10 +11,10 @@ Config.EnableESXIdentity          = true -- Enable if you're using esx_identity.
 Config.EnableLicenses             = true -- Enable if you're using esx_license.
 
 Config.EnableHandcuffTimer        = true -- Enable handcuff timer? will unrestrain player after the time ends.
-Config.HandcuffTimer              = 15 * 60000 -- 15 minutes.
+Config.HandcuffTimer              = 10 * 60000 -- 10 minutes.
 
 Config.EnableJobBlip              = true -- Enable blips for cops on duty, requires esx_society.
-Config.EnableCustomPeds           = true -- Enable custom peds in cloak room? See Config.CustomPeds below to customize peds.
+Config.EnableCustomPeds           = false -- Enable custom peds in cloak room? See Config.CustomPeds below to customize peds.
 
 Config.EnableESXService           = true -- Enable esx service?
 Config.MaxInService               = 10 -- How much people can be in service at once?
